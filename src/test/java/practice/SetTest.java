@@ -1,6 +1,5 @@
-package study;
+package practice;
 
-import org.assertj.core.internal.Strings;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,9 +8,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.platform.commons.util.StringUtils;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.assertj.core.api.Assertions.assertThat;
-import java.util.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class SetTest {
     private Set<Integer> numbers;
 
@@ -26,13 +29,13 @@ public class SetTest {
 
     @Test
     @DisplayName("set 크기확인")
-    void test1(){
+    void test1() {
         assertThat(numbers.size()).isEqualTo(3);
     }
 
     @Test
     @DisplayName("set cotains")
-    void test2(){
+    void test2() {
         assertThat(numbers.contains(1)).isTrue();
         assertThat(numbers.contains(2)).isTrue();
         assertThat(numbers.contains(3)).isTrue();

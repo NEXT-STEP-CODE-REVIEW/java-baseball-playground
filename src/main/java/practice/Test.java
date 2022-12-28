@@ -1,4 +1,4 @@
-package study;
+package practice;
 
 public class Test {
 
